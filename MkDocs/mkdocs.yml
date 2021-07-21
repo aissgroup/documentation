@@ -1,0 +1,43 @@
+site_name: Quick Service Restaurant Order Assistant - Team B Documentation
+nav:
+    - Home: index.md
+    - 'Use Case': 
+        - 'Business Plan': 01_business_plan/use_case.md
+        - 'QSROA - Demo Video': 01_business_plan/demo_video.md
+    - 'Data Generation': 
+        - 'Dataset': 02_data_generation/data_generation.md
+    - 'Model':
+        - 'Model': 03_model/model.md
+    - 'System Architecture': 
+        - 'System Architecture': 04_backend_frontend/system_architecture.md
+    - 'Deployment': 
+        - 'Deployment': 05_deployment/deployment.md
+    - 'Appendix': 
+        - 'Setup Documentation': 06_documentation/documentation.md
+        - 'Table of Contributors': 06_documentation/table_of_contributors.md
+theme: 
+    name: material
+    favicon: assets/images/favicon.ico
+    logo: assets/images/favicon.ico
+    palette:
+        primary: teal
+        accent: cyan
+    features:
+        - navigation.tabs
+        - navigation.tabs.sticky
+    custom_dir: docs/overrides
+copyright: With ❤ by Joshua, Leon, Julian, Felix, Christian & Magnus
+markdown_extensions:
+  - attr_list
+plugins:
+    - mkdocs-video:
+        css_style:
+            position: relative
+            weight: "100%"
+            height: 18.7225vw
+            width: 50vw
+    - search
+    # - pdf-export:
+    #     verbose: true
+    #     media_type: print
+

@@ -1,0 +1,868 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>Deployment - Quick Service Restaurant Order Assistant - Team B Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deployment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Quick Service Restaurant Order Assistant - Team B Documentation" class="md-header__button md-logo" aria-label="Quick Service Restaurant Order Assistant - Team B Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quick Service Restaurant Order Assistant - Team B Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deployment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01_business_plan/use_case/" class="md-tabs__link">
+        Use Case
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../02_data_generation/data_generation/" class="md-tabs__link">
+        Data Generation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../03_model/model/" class="md-tabs__link">
+        Model
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../04_backend_frontend/system_architecture/" class="md-tabs__link">
+        System Architecture
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Deployment
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../06_documentation/documentation/" class="md-tabs__link">
+        Appendix
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Quick Service Restaurant Order Assistant - Team B Documentation" class="md-nav__button md-logo" aria-label="Quick Service Restaurant Order Assistant - Team B Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    Quick Service Restaurant Order Assistant - Team B Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Use Case
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Use Case" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Use Case
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_business_plan/use_case/" class="md-nav__link">
+        Business Plan
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_business_plan/demo_video/" class="md-nav__link">
+        QSROA - Demo Video
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Data Generation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Generation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data Generation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_data_generation/data_generation/" class="md-nav__link">
+        Dataset
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Model
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Model" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_model/model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        System Architecture
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="System Architecture" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          System Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_backend_frontend/system_architecture/" class="md-nav__link">
+        System Architecture
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Deployment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deployment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Deployment
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-setup" class="md-nav__link">
+    Hardware Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab-pipeline" class="md-nav__link">
+    GitLab Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-scripts" class="md-nav__link">
+    Build Scripts
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Appendix
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Appendix" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Appendix
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_documentation/documentation/" class="md-nav__link">
+        Setup Documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_documentation/table_of_contributors/" class="md-nav__link">
+        Table of Contributors
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-setup" class="md-nav__link">
+    Hardware Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab-pipeline" class="md-nav__link">
+    GitLab Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-scripts" class="md-nav__link">
+    Build Scripts
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="deployment">Deployment</h1>
+<p>One of our main objectives of this class and its group work was to
+deliver a service that was actually value-adding to a real-life problem.
+Our solution had to be as practical and realistic as possible. Thus, it
+was clear early on, that the deployment would play a crucial role in
+achieving this goal. We did, however, manage to deliver our service in a
+form deployable on a single Jetson Nano including backend as well as
+frontend. Hence, we are able to present a solution that is easily
+deployable on a single small and cost-effective device.</p>
+<p>This chapter elaborates on how the deployment process of the QSROA works
+and how the device can be optimally set-up for use.</p>
+<h2 id="hardware-setup">Hardware Setup</h2>
+<p>With packing stations of QSRs being the main area of application of the
+QSROA, we suggest a somewhat standardized setup of the hardware.<br>
+The setup essentially revolves around the camera. We suggest that the
+camera and therefore the Jetson Nano is mounted at a fixed height of one
+meter above the counter. Further, we advise to place the camera in
+parallel to the surface of the counter.</p>
+<p>The Jetson itself needs to be connected to a local network via LAN. The
+packing area should preferably be well lit to avoid extensive shadows.
+There are no recommendations regarding the surface structure or the
+color of the counter.</p>
+<p><img alt="Setup Hardware" src="../media/setup.jpg" /></p>
+<h2 id="docker">Docker</h2>
+<p>Originally, we planned to do the complete developing process on other
+computers to subsequently build the Docker containers and upload them to
+a container registry. On the Jetson Nano one would then only call
+docker-compose to pull and start the containers.</p>
+<p>However, this concept led us into some problems as certain steps of our
+build process require the DeepStream and CUDA SDK to be present on the
+build system. The latter of which is only compatible with certain Nvidia
+GPUs. It may have been possible to build an adequate virtual machine to
+overcome the issue, anyhow the effort required for this would not have
+been justifiable.</p>
+<p>We therefore went with an adapted concept.<br>
+This concept includes three distinct Docker Containers: one for the
+frontend, one for the backend and one for the inference. Now as before,
+both frontend and backend are built on PCs. By contrast, the inference
+container is being built on the Jetson Nano.<br>
+In the following the containers are depicted in more detail.</p>
+<p>The creation of the container for the fronted starts with the conduction
+of a production build of the React application in a node.js container.
+Therefore, the needed packages (<code>package.json</code>) are installed and the
+source code of the application is copied into the container. The
+resulting production build is then copied into a nginx container, which
+we use to host the react website. nginx is a webserver software.</p>
+<p>For the backend, the source-files as well as the requirements.txt are
+copied into a python container. Then, the required packages are
+installed with pip. In a final step, the backend is executed via
+gunicorn, a http-server provider for python.</p>
+<p>Nvidia actually supplies a <a href="https://ngc.nvidia.com/catalog/containers/nvidia:deepstream-l4t">Docker base image for DeepStream</a>, which is
+used for the inference.<br>
+All necessary libraries are installed in the Docker Container and
+gst-python is being pulled and built from the GStreamer Github repo.
+Next, the files from the inference folder are copied into the container,
+the <code>requirements.txt</code> installed and <code>run_server.py</code> executed. <code>run_server.py</code>
+executes the deepstream pipeline and takes care of the Socket.IO
+connection to the backend.</p>
+<h2 id="gitlab-pipeline">GitLab Pipeline</h2>
+<p>Originally it was planned to use a GitLab Runner for automated Docker
+builds. Merge requests in the master branch would trigger the
+pipeline to automatically build a new Docker container and upload it to
+the container registry.<br>
+While the pipeline worked well for the frontend, the pushing already
+caused trouble. As the inference container must be built with scripts on
+the Jetson Nano either way, we decided to take another path.<br>
+Thus, we ended up outright working with build scripts. Of the two
+alternatives, it came out as significantly less effortful. The fact that
+a limited number of people worked on this project in a brief time span
+supports this decision.</p>
+<h2 id="build-scripts">Build Scripts</h2>
+<p>As elaborated in the preceding paragraphs, both frontend and backend
+Docker containers are built on PCs. Unfortunately, KIT GitLab does not
+provide a container registry, so that we had to extend the project by a
+GitHub account, named "aissgroup".</p>
+<p>In the respective folders of frontend and backend, a script is available
+named <code>deploy-arm.sh</code>. These scripts build Docker Containers for the
+Jetson and push them to the container registry.<br>
+For testing purposes on Windows, there are additional scripts available
+named <code>deploy.sh</code>. They differ in a way that the Docker Containers are now
+created for Windows.</p>
+<p>Unlike front- and backend, the inference must be built with scripts
+directly on the Jetson. Thus, the script named <code>build.sh</code> is to be
+executed on the device. The script creates a temporary build folder, in
+which all relevant files such as Github projects, model weights and
+labels are copied. The first thing built is the <code>yolov5s.engine</code>.
+Subsequently a <code>libnvdsinfer_custom_impl_Yolo.so</code> Library is built by the
+script. Finally, both files and <code>labels.txt</code> are copied into a folder
+named output.</p>
+<p>To finally deploy the whole service on the Jetson, two more scripts need
+to be used. They can be found on the top level of the project folder and
+are named <code>build_all.sh</code> and <code>start_all.sh</code>.
+Both of them must be executed on the Jetson.</p>
+<p><code>build_all.sh</code> deletes all existing Docker Containers and images to be
+able to conduct a clean, new build and avoid accidental uses of old
+images. Following, both the frontend and the backend container get
+pulled from the repository and the inference Docker Container is being
+built.</p>
+<p>After successfully running the build script, the <code>start_all.sh</code> script is
+to be executed. The script stops all running containers and deletes
+them. It then starts the three containers of the QSROA application and
+exposes the following ports in the network:</p>
+<ul>
+<li>5001 Backend Port</li>
+<li>1234 Frontend Port</li>
+<li>8554 RTSP Port</li>
+</ul>
+<p>It was decided to go with two separate scripts for the build and the
+execution as it enables repetitive starts of the application without
+rebuilding.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    With ❤ by Joshua, Leon, Julian, Felix, Christian & Magnus
+                </div>
+                
+                powered by
+                <a href="https://www.mkdocs.org" title="MkDocs">MkDocs</a>
+                and
+                <a href="https://squidfunk.github.io/mkdocs-material/"
+                   title="Material for MkDocs">
+                    Material for MkDocs</a>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+    
+  </body>
+</html>

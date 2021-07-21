@@ -1,0 +1,1099 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>Dataset - Quick Service Restaurant Order Assistant - Team B Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dataset" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Quick Service Restaurant Order Assistant - Team B Documentation" class="md-header__button md-logo" aria-label="Quick Service Restaurant Order Assistant - Team B Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quick Service Restaurant Order Assistant - Team B Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dataset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01_business_plan/use_case/" class="md-tabs__link">
+        Use Case
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Data Generation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../03_model/model/" class="md-tabs__link">
+        Model
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../04_backend_frontend/system_architecture/" class="md-tabs__link">
+        System Architecture
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../05_deployment/deployment/" class="md-tabs__link">
+        Deployment
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../06_documentation/documentation/" class="md-tabs__link">
+        Appendix
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Quick Service Restaurant Order Assistant - Team B Documentation" class="md-nav__button md-logo" aria-label="Quick Service Restaurant Order Assistant - Team B Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    Quick Service Restaurant Order Assistant - Team B Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Use Case
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Use Case" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Use Case
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_business_plan/use_case/" class="md-nav__link">
+        Business Plan
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_business_plan/demo_video/" class="md-nav__link">
+        QSROA - Demo Video
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Data Generation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Generation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data Generation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dataset
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Dataset
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-generation" class="md-nav__link">
+    Data Generation
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#items" class="md-nav__link">
+    Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-augmentation" class="md-nav__link">
+    Data Augmentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-dataset" class="md-nav__link">
+    Final Dataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-extensions" class="md-nav__link">
+    Possible Extensions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Model
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Model" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_model/model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        System Architecture
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="System Architecture" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          System Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_backend_frontend/system_architecture/" class="md-nav__link">
+        System Architecture
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Deployment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deployment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_deployment/deployment/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Appendix
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Appendix" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Appendix
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_documentation/documentation/" class="md-nav__link">
+        Setup Documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_documentation/table_of_contributors/" class="md-nav__link">
+        Table of Contributors
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-generation" class="md-nav__link">
+    Data Generation
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#items" class="md-nav__link">
+    Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-augmentation" class="md-nav__link">
+    Data Augmentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-dataset" class="md-nav__link">
+    Final Dataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-extensions" class="md-nav__link">
+    Possible Extensions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="dataset">Dataset</h1>
+<h2 id="data-generation">Data Generation</h2>
+<p>On consideration of the field of use of the QSROA, it becomes apparent
+that the required object detection is limited to few types of objects
+with instances having an extremely high level of similarity. Deducted
+from this finding, we conclude that synthetic data as the main component
+of the dataset is the ideal way to go. It combines a variety of
+advantages.<br>
+First, it is comparatively simple to generate a comprehensive dataset.
+Further, generating a synthetic dataset is a rather time- and
+resource-saving process. Finally, a synthetic dataset comes with a high
+level of flexibility since it allows for easy retraining upon menu
+changes.</p>
+<h3 id="items">Items</h3>
+<p>The dataset consists of 15 objects. 14 of them are different items
+purchasable at McDonald's. The 15th item is hands, because they will
+often be seen by the QSROA once in action.</p>
+<ul>
+<li>
+<p>Fries</p>
+</li>
+<li>
+<p>Hamburger</p>
+</li>
+<li>
+<p>Cheeseburger</p>
+</li>
+<li>
+<p>Big Mac</p>
+</li>
+<li>
+<p>Hamburger Royal TS</p>
+</li>
+<li>
+<p>McRib</p>
+</li>
+<li>
+<p>McChicken Classic</p>
+</li>
+<li>
+<p>Chicken McNuggets 9er</p>
+</li>
+<li>
+<p>McWrap</p>
+</li>
+<li>
+<p>McSundae</p>
+</li>
+<li>
+<p>Softdrink</p>
+</li>
+<li>
+<p>Ketchup</p>
+</li>
+<li>
+<p>Mayonnaise</p>
+</li>
+<li>
+<p>Sauce</p>
+</li>
+<li>
+<p>Hands</p>
+</li>
+</ul>
+<h3 id="requirements">Requirements</h3>
+<p>When considering the requirements for the pictures that have been taken,
+one must differentiate between single-item and multi-item images.</p>
+<p>Single-item images are those that show only one object per picture.
+Their main purpose is to use them for the creation of the synthetic
+dataset.<br>
+Multi-item images on the other hand, show multiple objects and can be
+used for retraining the model. Later we will confront the model
+performance trained purely on our synthetic dataset with the described
+hybrid dataset achieved performance.</p>
+<p>For both image categories, the area for the picture taken must be well
+lit and the camera used needs to be positioned perpendicular to the
+surface on which the items are being placed.</p>
+<p>Further, in single-item images, shadows are to be avoided and there must
+be no hands in the way. For each item a minimum of four pictures has
+been taken while placing the images of the items in various positions on
+the surface. The following figure shows our setup requirements for
+taking images of the relevant objects to ensure consistency through our
+synthetic dataset.</p>
+<p><img alt="Setup Requirements" src="../media/setup.png" /></p>
+<p>In multi-item images we value a realistic combination of objects. The
+objects may slightly intersect each other, moreover, hands are allowed
+as well, however, the items must remain recognizable. Each item in the
+picture must be labeled with a bounding box of its category. Finally, it
+is desired to get multiple pictures of identical compositions in
+different spatial arrangements.</p>
+<h3 id="data-augmentation">Data Augmentation</h3>
+<p>The exact number of single-item images used for the generation of the
+dataset can be seen in the following table.</p>
+<p>The process of the generation goes the following. For every picture the
+item is cut out. The resulting images are then scaled down to a
+predefined resolution. The resulting images are ready to be used for the
+synthetic dataset.<br>
+For every synthetic picture, at first, we load a random background image
+out of a selection. Then, out of the pre-processed images, a few are
+randomly added to the picture. To increase diversity between images, we
+apply additional transformations to the items. These transformations
+include randomly rotating and warping the items to simulate different
+perspectives as well as blurring the image to simulate an out-of-focus
+effect.</p>
+<p>Items may overlap, however no more than 50 percent. On top of the
+classes, hands may be placed randomly to generate a more realistic
+representation of what the final system may expect.<br>
+After all items have been placed, random noise is introduced to the
+final image. Noise includes black parts and spots over the image to
+further discourage the network from memorizing rather than learning from
+the images.<br>
+Finally, the item position and size are saved. Since we initially
+planned to use COCO-Format, our annotations were created in this
+format. This means the annotation for all images from the dataset are
+saved in a single JSON file. Since we later switched to using a YOLO
+network, we had to convert the annotations into the new format. YOLO
+requires a <code>txt</code> file with the class location for every image.<br>
+An example of a resulting synthetic picture can be seen in the following
+figure. The shown table displays the quantity of slightly different
+images available for the synthetic dataset.</p>
+<p><img alt="Synthetic dataset example" src="../media/sync_ex.jpg" /></p>
+<p>To test the data generation yourself, follow the <a href="https://git.scc.kit.edu/upsla/case_study_ai_in_cv/-/blob/master/notebooks/DataGeneration.ipynb"><code>DataGeneration.ipynb</code></a>
+notebook.</p>
+<table>
+<thead>
+<tr>
+<th>Item-class</th>
+<th>Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fries</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Hamburger</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Cheeseburger</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Big Mac</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Hamburger Royal TS</td>
+<td>15</td>
+</tr>
+<tr>
+<td>McRib</td>
+<td>7</td>
+</tr>
+<tr>
+<td>McChicken Classic</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Chicken McNuggets 9er</td>
+<td>19</td>
+</tr>
+<tr>
+<td>McWrap</td>
+<td>24</td>
+</tr>
+<tr>
+<td>McSundae</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Softdrink</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Ketchup</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Mayonnaise</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Sauce</td>
+<td>28</td>
+</tr>
+<tr>
+<td>Hands</td>
+<td>17</td>
+</tr>
+</tbody>
+</table>
+<h2 id="final-dataset">Final Dataset</h2>
+<p>Our final dataset consists of three different sets. A training dataset
+used to train the model, a validation dataset used to evaluate the
+model's performance while training and a test dataset to evaluate the
+final model performance.</p>
+<p>The training dataset consists of 45.000 synthetic images and an
+additional 5000 random images with no classes to further regularize the
+model. These 5000 images were taken from the COCO2017 dataset.</p>
+<p>The validation dataset consists of 5000 images, 95% of which are
+synthetic images, the remaining 5% are randomly selected stock images
+containing no classes.</p>
+<p>The test dataset consists of 160 real images that were labeled by hand.
+These pictures were taken on the system that will be deployed to
+customers. Distance, camera, lighting, etc. are as specified to gain
+information about the true real-world performance of the system. The
+test dataset features 146 highly complex images that may not be found in
+a real-world application.<br>
+Classes were stacked on top of each other, were almost completely
+out-of-frame and include modifications such as straws in the beverages
+or entirely molten ice cream.<br>
+This ensures that the performance we evaluate on the test set can be
+seen as a conservative "lower bound". If the system was to be shipped
+to a customer, we believe to be able to guarantee a performance similar
+to the evaluation results on the test set. However, in a day to day use
+a significantly better performance can be expected. Partly because the
+images should usually not be as complex, and in part, since we classify
+a continuous stream of images. This means that while a hand may block
+parts of an image for a couple of frames, by combining the
+classification results of multiple frames into our final prediction we
+can get a robust classification that can deal with missing out on some
+items every couple of frames.</p>
+<p><img alt="Test data example" src="../media/test_ex.png" /></p>
+<p>We originally planned to create a dataset consisting of a hybrid between
+synthetic data and real data. Our tests showed that adding real data
+into the dataset resulted in little to no improvement in model
+performance, as you can see in the following table. The given metrics
+are used to describe the accuracy of the model-output over all
+item-classes.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Purely synthetic dataset</th>
+<th>Hybrid dataset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precision</td>
+<td>0.950</td>
+<td>0.932</td>
+</tr>
+<tr>
+<td>Recall</td>
+<td>0.822</td>
+<td>0.844</td>
+</tr>
+<tr>
+<td>mAP@.5 (threshold at 0.5)</td>
+<td>0.893</td>
+<td>0.903</td>
+</tr>
+<tr>
+<td>mAP@.95 (threshold at 0.95)</td>
+<td>0.650</td>
+<td>0.641</td>
+</tr>
+</tbody>
+</table>
+<p>This small performance gap might be caused by differing quantities in
+the two sets. While synthetic data is easy and quick to generate, real
+data needs to be manually annotated which is a slow and tedious process.
+This resulted in an imbalance between the two groups. While we used
+45.000 generated synthetic images, we only added 160 real-world images.</p>
+<p>The synthetic nature of the training data ensures an unbiased and evenly
+distributed dataset. Human bias to items positioning, grouping or
+selection can be almost entirely ruled out. This also shows in the
+statistical analysis of the training dataset.</p>
+<p><img alt="Synthetic figures" src="../media/sync_fig.png" /></p>
+<p>The items are distributed evenly across the
+image. All classes have a similar amount of occurrences in the dataset.
+The width and height of the classes are less evenly distributed. This is
+the plain result of the shape of the McDonalds packaging and should not
+influence the models' performance negatively.</p>
+<p>The test dataset was created by hand. While this means that the
+distribution among classes is less even than with the synthetic dataset,
+we still tried to minimize the bias and create an evenly distributed
+dataset.</p>
+<p>The class <code>mc_flurry</code> was scratched last minute from the test dataset.
+This was more logistical than a technical decision since the temperature
+in Karlsruhe at that time transformed a McFlurry into a McMilkshake
+within minutes, so difficult decisions had to be made.</p>
+<p>Apart from the McFlurry, classes are roughly evenly distributed and all
+classes contain at least a few different samples so the model's
+performance can be sufficiently evaluated.</p>
+<p><img alt="Test figures" src="../media/test_fig.png" /></p>
+<h2 id="possible-extensions">Possible Extensions</h2>
+<p>In a real-world environment, the synthetic dataset allows a rapid
+adaption of the model to an ever-changing menu. By adding images of new
+menu items to the synthetic data generator, new training datasets can be
+created instantaneously with little to no human input.</p>
+<p>Especially large QSR chains may benefit from this approach as vector
+graphics of the menu items and 3D models typically already exist for
+marketing purposes. By using these images and 3D models the generation
+of an even more detailed synthetic dataset may be possible. Instead of
+using simple 2D pixel operations, in real-world 3D renders as training
+data may further increase model performance by teaching the model about
+different perspectives and overlaps of items.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    With ❤ by Joshua, Leon, Julian, Felix, Christian & Magnus
+                </div>
+                
+                powered by
+                <a href="https://www.mkdocs.org" title="MkDocs">MkDocs</a>
+                and
+                <a href="https://squidfunk.github.io/mkdocs-material/"
+                   title="Material for MkDocs">
+                    Material for MkDocs</a>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+    
+  </body>
+</html>

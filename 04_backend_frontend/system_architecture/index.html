@@ -1,0 +1,1210 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>System Architecture - Quick Service Restaurant Order Assistant - Team B Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Quick Service Restaurant Order Assistant - Team B Documentation" class="md-header__button md-logo" aria-label="Quick Service Restaurant Order Assistant - Team B Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quick Service Restaurant Order Assistant - Team B Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01_business_plan/use_case/" class="md-tabs__link">
+        Use Case
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../02_data_generation/data_generation/" class="md-tabs__link">
+        Data Generation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../03_model/model/" class="md-tabs__link">
+        Model
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        System Architecture
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../05_deployment/deployment/" class="md-tabs__link">
+        Deployment
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../06_documentation/documentation/" class="md-tabs__link">
+        Appendix
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Quick Service Restaurant Order Assistant - Team B Documentation" class="md-nav__button md-logo" aria-label="Quick Service Restaurant Order Assistant - Team B Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    Quick Service Restaurant Order Assistant - Team B Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Use Case
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Use Case" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Use Case
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_business_plan/use_case/" class="md-nav__link">
+        Business Plan
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_business_plan/demo_video/" class="md-nav__link">
+        QSROA - Demo Video
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Data Generation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Generation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data Generation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_data_generation/data_generation/" class="md-nav__link">
+        Dataset
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Model
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Model" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_model/model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        System Architecture
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="System Architecture" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          System Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          System Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        System Architecture
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inference" class="md-nav__link">
+    Inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    Technical Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorrt-inference" class="md-nav__link">
+    TensorRT Inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-tracking-and-skip-inference" class="md-nav__link">
+    Object Tracking and Skip-Inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistics-collection" class="md-nav__link">
+    Statistics Collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    Backend
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functionality" class="md-nav__link">
+    Functionality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    Frontend
+  </a>
+  
+    <nav class="md-nav" aria-label="Frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-checkout-system" class="md-nav__link">
+    The Checkout System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-order-control-screen" class="md-nav__link">
+    The Order Control Screen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-process" class="md-nav__link">
+    Development Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Deployment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deployment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_deployment/deployment/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Appendix
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Appendix" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Appendix
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_documentation/documentation/" class="md-nav__link">
+        Setup Documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_documentation/table_of_contributors/" class="md-nav__link">
+        Table of Contributors
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inference" class="md-nav__link">
+    Inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    Technical Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorrt-inference" class="md-nav__link">
+    TensorRT Inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-tracking-and-skip-inference" class="md-nav__link">
+    Object Tracking and Skip-Inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistics-collection" class="md-nav__link">
+    Statistics Collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    Backend
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functionality" class="md-nav__link">
+    Functionality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    Frontend
+  </a>
+  
+    <nav class="md-nav" aria-label="Frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-checkout-system" class="md-nav__link">
+    The Checkout System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-order-control-screen" class="md-nav__link">
+    The Order Control Screen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-process" class="md-nav__link">
+    Development Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="system-architecture">System Architecture</h1>
+<p>The QSROA system consists of three independent components: the inference
+pipeline, a backend and a frontend. The inference process takes care of
+the deployment of our model and provides an RTSP video stream. The
+backend is responsible for the logical analysis of the detected objects
+and the frontend is used to display the results and furthermore
+demonstrates a use case.</p>
+<p>In the following figure the parts of our systems are illustrated. The
+frontend is developed by using React, Material-UI and nginx. It
+communicates with the backend via Socket.IO and REST Endpoints. The
+backend is developed with Flask, Socket.IO and gunicorn. The inference
+pipeline is based on Nvidias DeepStream SDK for Python and sends data on
+detected objects to the backend via a Socket.IO connection.</p>
+<p>All three components are deployed using Docker. The components are
+described in detail in the following paragraphs.</p>
+<p><img alt="overview" src="../media/overview.png" /></p>
+<h2 id="inference">Inference</h2>
+<p>Due to the confined availability of resources, hardware limitations can
+pose a significant challenge for the deployment of computer vision
+models on portable and low-power devices. Therefore, the characteristics
+of target platforms must be carefully considered when designing a model.
+However, driven by the increasing demand for on-device AI and mobile
+gaming, powerful mobile SOCs, offering both, high graphics performance
+and specialized hardware for machine learning tasks, have become widely
+available. Nevertheless, utilizing the full potential of these platforms
+often involves the use of proprietary frameworks and is consequently
+still a cumbersome process. While the performance of the Nvidia Jetson
+Nano platform, as the target platform for this project, is easily
+outperformed by more recent devices such as modern smartphones, it still
+offers access to a rich ecosystem of GPU-accelerated frameworks provided
+by Nvidia.</p>
+<p>Most common machine learning frameworks, including TensorFlow and
+PyTorch, offer support for GPU-accelerated inference backed by <a href="https://developer.nvidia.com/cuda-zone">Nvidia
+CUDA</a>. However, <a href="https://developer.nvidia.com/tensorrt">Nvidia
+TensorRT</a> is the preferred
+inference framework for the deployment of deep learning models on Jetson
+devices. It maximizes throughput and reduces latency by automatically
+applying various optimization techniques. While the inference step is
+most resource-demanding, creating a real-time computer vision
+application involves numerous other processing steps. First, the image
+must be preprocessed and transformed to the format required by the
+inference engine. Following this step, the model output has to be
+processed (e.g. performing Non-maximum Suppression, drawing bounding
+boxes). Finally, depending on the required output format, the video
+stream needs to be encoded. Specialized and highly performant frameworks
+such as OpenCV for video processing are available for all these steps. A
+basic approach to creating a processing pipeline would involve
+sequentially passing data between these steps in a loop. While this can
+deliver decent results, it creates plenty of overhead. Most noticeably,
+data must be copied between GPU and CPU memory multiple times.</p>
+<p>There are several approaches for addressing those shortcomings. After
+extensive investigation, we figured that Nvidia's <a href="https://developer.nvidia.com/deepstream-sdk">DeepStream
+SDK</a> best matches the
+requirements for the QSROA project. As a framework specifically targeted
+towards the development of AI-powered intelligent video analytics apps
+and services, it offers a high level of flexibility and customizability.
+Resulting from a tight integration into the Jetson ecosystem, it also
+offers superior performance to other solutions.</p>
+<p>DeepStream is based on the popular pipeline-driven media framework
+<a href="https://gstreamer.freedesktop.org/">GStreamer</a> and extends upon it by
+implementing a range of additional plugins specifically targeted towards
+AI applications. These plugins are optimized for Jetson devices and
+Nvidia Datacenter GPUs. As such it allows for the integration of
+TensorRT inference into a GStreamer media pipeline.</p>
+<h2 id="technical-details">Technical Details</h2>
+<p>The QSROA inference solution is implemented using the DeepStream SDK for
+Python and consists of two major components. The DeepStream pipeline
+itself and a Python script responsible for managing the pipeline process
+and communication with the backend.</p>
+<p>The DeepStream pipeline takes the input image provided by the CSI-Camera
+attached to the Jetson Nano. The generated GStreamer buffers are passed
+through the pipeline, applying different preprocessing steps such as
+downsizing the input image. Data is then passed to the
+<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_plugin_gst-nvinfer.html">Gst-nvinfer</a>
+component responsible for TensorRT inference. Further details on
+inference are explained in section <a href="#TensorRT-Inference">TensorRT
+Inference</a>. As part of inference metadata
+containing information on recognized objects and more are attached to
+the buffers. After inference buffers are (optionally) passed to the
+<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_plugin_gst-nvtracker.html">Gst-nvtracker</a>
+component executing unique object tracking. The output image is then
+processed further (e.g. bounding boxes are drawn) and is either output
+as a windowed video stream on the Jetson device or as a low-latency RTSP
+video stream. As RTSP is a common streaming protocol for IP cameras and
+CCTV surveillance, it is most likely already in use at the majority of
+POS locations. QSROA customers may therefore choose to integrate this
+stream into their existing systems.</p>
+<p><img alt="pipeline" src="../media/pipeline.png" /></p>
+<h2 id="tensorrt-inference">TensorRT Inference</h2>
+<p>While Nvidia provides samples for the deployment of YOLO models using
+TensorRT and DeepStream, newer YOLO models such as the YOLOv5 model used
+by the QSROA are not yet supported. However, the provided source can be
+updated to support these models.</p>
+<p>As such, there is an official <a href="https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5">TensorRT implementation of
+YOLOv5</a> that
+can be used to obtain a TensorRT engine file upon compilation. This
+engine can then be used along with the necessary nvinfer plugin provided
+by the
+<a href="https://github.com/marcoslucianops/DeepStream-Yolo">DeepStream-Yolo</a>
+project on GitHub. Updates were applied to both projects' source code
+to match QSROA requirements.</p>
+<h2 id="object-tracking-and-skip-inference">Object Tracking and Skip-Inference</h2>
+<p>The
+<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_plugin_gst-nvtracker.html">Gst-nvtracker</a>
+plugin can be used to track detected objects in DeepStream pipelines.
+This allows assigning unique ids to objects and tracking their movement
+over time. The DeepStream SDK provides three different low-level tracker
+implementations that can be chosen depending on project requirements.
+Unique object tracking could therefore be used to implement more
+advanced features. However, this functionality is not yet used for the
+QSROA.</p>
+<p>As object trackers typically consume noticeably fewer resources than
+TensorRT inference, they can also be used to optimize perceived video
+stream performance. The QSROA DeepStream pipeline achieves this by
+skipping inference for every 2^nd^ frame. As objects are tracked by the
+tracker component, bounding boxes can still be updated every frame,
+resulting in almost doubling the framerate while still being able to
+keep track of detected objects. Applying skip-inference is vastly
+beneficial for model selection as it allows for the deployment of models
+that would otherwise be too large for delivering an acceptable
+framerate. This even allows for the deployment of a YOLOv4-CSP or
+full-size YOLOv4 model on a Jetson Nano as demonstrated in the section
+model.</p>
+<h2 id="statistics-collection">Statistics Collection</h2>
+<p>To supply the backend with necessary information it is required to
+extract the metadata from the stream. For DeepStream pipelines, it is
+common practice to insert a (blocking) callback before the
+<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_plugin_gst-nvdsosd.html">Gst-nvdsosd</a>
+component, which is amongst other things responsible for drawing
+bounding boxes. The callback receives the buffers that would otherwise
+be directly passed to the nvdsosd component. This allows for applying
+changes to the metadata or adding additional text to be drawn. As by
+that time the buffers already contain all the necessary metadata, it can
+also be used to collect the information required by the backend.</p>
+<p>We do this by counting all objects in a frame (grouped by class). The
+information is then added to a global two-dimensional dictionary. The
+first index of this dictionary corresponds to the label of the object
+class whereas the second object corresponds to how often this class
+appears in the frame. The integer value is incremented by one for each
+key-pair obtained from counting objects in the frame. Every second this
+dictionary is submitted to a <a href="https://docs.python.org/3/library/multiprocessing.html#pipes-and-queues">multiprocessing
+queue</a>
+along with a timestamp and the total number of frames since last
+submitting to the queue. The dictionary is afterward cleared.</p>
+<p>The Python script responsible for managing the inference process
+collects the information from the multiprocessing queue and acts as a
+<a href="https://socket.io/">Socket.IO</a> client that sends the data to the
+backend for further processing. The following example shows the format
+of the dictionary sent to the backend. As can be obtained from the
+information contained in the dictionary, two objects of class <em>beverage</em>
+were detected in 2 of the last 20 frames while three objects of class
+<em>beverage</em> were detected in 18 frames. An object of type <em>fries</em> was
+detected in all 20 frames.</p>
+<pre><code class="language-json">{
+    'frames_since_last_report': 20, 
+    'objects': {
+        'beverage': {
+            '2': 2, 
+            '3': 18
+        }, 
+        'fries': {'1': 20}
+        }, 
+    'timestamp': 1625162677116201
+}
+</code></pre>
+<h2 id="backend">Backend</h2>
+<p>In the case of the QSROA, the backend has the central task of bringing
+together the results produced by the model with the logic and
+functionality necessary in order to deliver the advanced service.</p>
+<p>Its structure and way of functioning should therefore be described
+below.</p>
+<h3 id="structure">Structure</h3>
+<p>The backend has been created with Flask. It is constructed through
+python Socket.IO and REST endpoints which may be described in the
+following:</p>
+<p><code>/send-orders</code>: <br>
+expects a JSON object in the format of</p>
+<pre><code class="language-json">{
+    'item': number_of_items
+}
+</code></pre>
+<p>example:</p>
+<pre><code class="language-json">{
+    'cheeseburger': 1,
+    'hamburger': 3,
+    'chickenburger': 2,
+}
+</code></pre>
+<p><code>/delete-orders</code>: <br>
+delete all orders</p>
+<p>Additionally, the inference process, described in the previous
+paragraph, subscribes to the Socket.IO connection <code>statistics</code>. The
+inference client sends a JSON object containing statistical data at a
+frequency of 1 Hz.</p>
+<p>The frontend subscribes to the Socket.IO connections <em>actual-order</em> and
+<em>orders</em>.</p>
+<h3 id="functionality">Functionality</h3>
+<p>The functionality of the backend crucially involves a parameter named
+<code>FRAMES</code>. The parameter describes the percentage of frames in which an
+object must be detected by the model in order to be interpreted as an
+actual object. It therefore can take on values in the range of [0, 1]
+and functions as a noise filter.<br>
+In the scope of the lecture this value has arbitrarily been set to 0.8.
+However, going forward it can certainly be optimized empirically.</p>
+<p><code>FRAMES</code> is then subsequently used to calculate another variable
+<code>min_frames</code>, with <code>min_frames</code> = <code>FRAMES</code> * <code>frames_since_last_report</code>.
+With this <code>min_frames</code> calculates the product of <code>FRAMES</code> and the number of
+frames captured since the last statistical analysis
+(<code>frames_since_last_report</code>). It therefore acts as the lower bound for the
+number of frames an object must be detected in to actually be considered
+an object by the QSROA. With <code>min_frames</code> being determined, for every item
+class in the statistical data provided, the following calculation is
+being conducted:</p>
+<p>For every item class the number of items gets identified. This happens
+by identifying the maximum number of instances of an item class for
+which the <code>min_frames</code> requirement is being fulfilled.<br>
+For clarification consider the following example:</p>
+<blockquote>
+<p><code>min_frames</code> has been calculated as twelve.<br>
+The model detected exactly four beverages in 3 frames, exactly three
+beverages in 11 frames and exactly two beverages in 2 frames.
+Obviously, if the model detects four beverages it implicitly detected
+two and three beverages as well.<br>
+As four beverages are detected in less frames than <code>min_frames</code> it gets
+discarded. Both three and two beverages got identified in more than 12
+frames (three in 3+11 and two in 3+11+2). The three beverages
+therefore equal the maximum item of numbers, so that the statistical
+calculation returns the result number of beverages is three.</p>
+</blockquote>
+<p>Thus, the calculation returns a list containing class items and their
+respective quantity.</p>
+<p>In a final step the calculated list is then compared with the current
+order, resulting in three lists.</p>
+<ul>
+<li>correct: Products that have been detected as well as found in the
+ order</li>
+<li>missing: Products that have been found in the order but not detected</li>
+<li>incorrect: Products that have been detected but not found in the order</li>
+</ul>
+<p>The three lists as well as the next eight elements of the order queue
+are then sent to the frontend via the Socket.IO connections.</p>
+<h3 id="notes">Notes</h3>
+<p>The systems processes orders by the FIFO principal.</p>
+<p>In order to be able to develop and test the backend independently from
+the jetson or rather the inference process, the backend has been
+extended by the file <code>mock.py</code>. With execution a Socket.IO connection to
+the backend is being established. Via the connection a JSON object
+containing the statistical data is being sent to the backend either in
+predefined temporal intervals or by operating the enter-button.</p>
+<p>For further information on the deployment, we refer to the chapter
+deployment. More information on how to run the backend as well as some
+hints can be found in the README of the backend directory.</p>
+<h2 id="frontend">Frontend</h2>
+<p>As we intend to demonstrate the QSROA and its functionalities in a best
+possible and most realistic scenario, our project includes two frontends
+for distinct application areas.<br>
+The first frontend focuses on our customer's customers by providing a
+checkout system.<br>
+The second view displays the central features of our service, serving as
+an order control screen to our customer's employees.</p>
+<p>For reasons of simplicity both frontends have been developed within the
+same project.</p>
+<h3 id="the-checkout-system">The Checkout System</h3>
+<p>The checkout system functions as a classic checkout system. It enables
+the restaurant's customers to put in their orders. The orders may be
+composed of an arbitrary combination of the items shown in the UI. It
+has been designed so that the input can take place via tablets and is
+touch-capable, therefore resembling current implementations of QSR
+chains.<br>
+To submit an order, the send button must be pressed. To delete the
+current selection, one must press the delete button.</p>
+<p>In a field project the checkout system would be replaced by our
+customers checkout
+system.
+<img alt="checkout" src="../media/checkout.png" /></p>
+<h3 id="the-order-control-screen">The Order Control Screen</h3>
+<p>The order control screen is the central visual element of the QSROA as
+it brings together the functionalities of the neural network and backend
+with an UI that enables the employees to profit from the added value.<br>
+It is the view that our customer's employees are intended to work with.
+The order control screen can be separated into two parts.<br>
+The first part displays the current order, meaning the current order the
+employee is supposed to process. The UI supports the employee by
+differentiating between items that have been added correctly so
+(complete) and those that are still missing (missing). Additionally, it
+also warns the employee of items that have been added mistakenly to the
+order (incorrect).<br>
+To further support the employee the three categories get clarified by
+the use of a traffic light scheme.</p>
+<p>The second part of the screen shows the subsequently following orders,
+so that the restaurant can act participatory and optimize its processes.</p>
+<p><img alt="order control screen" src="../media/order_control.png" /></p>
+<h3 id="development-process">Development Process</h3>
+<p>The frontend has been developed with React. For the creation of the app
+create-react-app was used. For the design the Material-UI package was
+added to the project. As a client for REST axios was chosen, for
+WebSocket connections the interfaces make use of Socket.IO.<br>
+The source of pictures utilized in the checkout system UI has been
+McDonald's
+(<a href="https://www.mcdonalds.com/de/de-de/produkte/alle-produkte.html">McDonald's</a>).<br>
+The structure of the UI is component based. Exemplary components are
+order lists and the traffic light list.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    With ❤ by Joshua, Leon, Julian, Felix, Christian & Magnus
+                </div>
+                
+                powered by
+                <a href="https://www.mkdocs.org" title="MkDocs">MkDocs</a>
+                and
+                <a href="https://squidfunk.github.io/mkdocs-material/"
+                   title="Material for MkDocs">
+                    Material for MkDocs</a>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+    
+  </body>
+</html>
